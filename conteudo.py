@@ -1,36 +1,78 @@
+import streamlit as st
 
-LICOES = {
-    "A Postura Física do Orador": """
-    ### 🚶‍♂️ A Linguagem Corporal no Palco
-    A sua voz começa na forma como o seu corpo está posicionado. Se o corpo estiver fechado, a voz sai fraca e o público perde o interesse.
+def exibir_conteudo():
+    st.title("Gabinete de Retórica, Oratória e Escrita")
+    st.subheader("O guia definitivo para dominar a palavra falada e escrita com alta performance.")
     
-    *   **A Base Sólida (Pés):** Alinhe seus pés na largura dos ombros. Não fique balançando de um lado para o outro (isso demonstra ansiedade). Imagine que você está enraizado no chão. Isso projeta autoridade instantânea.
-    *   **O Triângulo de Gestos:** Mantenha suas mãos acima da linha da cintura e abaixo do queixo. Gesticule para abrir espaço para as suas ideias, mostrando a palma das mãos (gesto que gera confiança biológica no cérebro de quem assiste).
-    *   **O Olhar Direcionado:** Não olhe para o teto ou para o chão. Divida a plateia em 3 blocos (Esquerda, Centro, Direita). Escolha uma pessoa de cada bloco e fale olhando diretamente nos olhos dela por 3 a 5 segundos antes de mudar o bloco.
+    # Imagem de Destaque na Tela Inicial
+    st.image("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop", 
+             caption="A arte de influenciar e liderar através da palavra.", use_container_width=True)
     
-    **Exercício de Prática Diária:** Fique de pé em frente ao espelho, alinhe os ombros para trás, respire pelo diafragma (barriga) e fale sua primeira frase mantendo as mãos abertas.
-    """,
+    st.markdown("---")
     
-    "A Dinâmica da Voz e Leitura": """
-    ### 🗣️ Projeção e Domínio do Ritmo
-    Ler em público não é apenas ler as palavras em voz alta; é desenhar as ideias no ar usando o som.
+    menu_teoria = st.selectbox(
+        "Escolhe o módulo de estudo:",
+        ["1. Fundamentos Psicológicos (Aristóteles)", 
+         "2. Estruturação de Textos e Redação", 
+         "3. Técnicas de Palco e Voz", 
+         "4. Gestão de Crise e Combate ao Bloqueio"]
+    )
     
-    *   **A Posição da Cabeça:** Ao ler um papel ou tela, nunca curve o pescoço totalmente para baixo. Isso esmaga a sua laringe e abafa o som. Traga o texto até a altura dos seus olhos ou incline apenas levemente a cabeça, mantendo o queixo paralelo ao chão.
-    *   **A Técnica do Ponto Final:** Sempre que encontrar um ponto final no texto, faça uma pausa real de 2 segundos. Use esse silêncio para olhar para a plateia. O silêncio dá peso à frase que você acabou de ler e faz as pessoas prestarem atenção no que vem a seguir.
-    *   **A Variação de Velocidade:** 
-        *   *Fale mais rápido* quando quiser transmitir entusiasmo, urgência ou ação.
-        *   *Fale mais devagar* (quase desacelerando as sílabas) quando for explicar o conceito mais importante da sua apresentação.
-    """,
-    
-    "Mecanismos Práticos da Escrita": """
-    ### ✍️ Ergonomia e Fluidez no Papel
-    A boa escrita começa no conforto do corpo e se transforma na clareza das frases. Se a sua postura estiver errada, seus pensamentos travam.
-    
-    *   **A Posição para Escrever:** Mantenha as costas retas apoiadas na cadeira e os dois pés planos no chão. O braço que escreve deve estar apoiado na mesa em um ângulo de 90 graus para evitar a tensão nos ombros, que bloqueia o fluxo criativo.
-    *   **O Desenho das Frases Dinâmicas:** Para manter o leitor preso ao seu texto, aplique a **Técnica do Acordeom**:
-        *   Escreva uma frase curta (5 a 7 palavras). Ela impacta.
-        *   Escreva uma frase média (12 a 15 palavras). Ela explica.
-        *   Escreva outra frase curta. Ela conclui.
-    *   **Corte de Gordura Textual:** Depois de escrever, passe o olho apagando as palavras "que", "muito", "talvez" e "geralmente". Reescreva a frase de forma direta. Em vez de "Eu acho que nós precisamos muito mudar isso", escreva "Precisamos mudar isso".
-    """
-}
+    if menu_teoria == "1. Fundamentos Psicológicos (Aristóteles)":
+        st.header("Os Pilares da Persuasão Humana")
+        st.write("A retórica não é apenas falar bem; é a capacidade de identificar os meios de persuasão disponíveis para qualquer tema.")
+        
+        # Imagem do Módulo 1
+        st.image("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop", width=500)
+        
+        st.subheader("Aprofundamento Prático:")
+        st.markdown("""
+        *   **Ethos (Construção de Autoridade):** Antes de começares a falar, o público avalia a tua competência. Podes construir Ethos demonstrando preparação, citando fontes confiáveis e mantendo uma postura vertical e segura.
+        *   **Pathos (Apelo Emocional):** As decisões humanas são baseadas em emoções e justificadas pela lógica. Usa narrativas (storytelling) onde haja um herói, um conflito claro e uma resolução inspiradora.
+        *   **Logos (Arquitetura Lógica):** Usa silogismos e dados estatísticos. Evita generalizações como 'toda a gente sabe'. Usa dados concretos: 'Segundo dados oficiais de 2026...'.
+        """)
+        
+    elif menu_teoria == "2. Estruturação de Textos e Redação":
+        st.header("Guia Prático de Boa Escrita")
+        st.write("Escrever com clareza é o primeiro passo para falar com impacto. Um texto confuso gera um discurso perdido.")
+        
+        # Imagem do Módulo 2
+        st.image("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=600&auto=format&fit=crop", width=500)
+        
+        st.subheader("As Quatro Fases da Redação Oratória:")
+        st.markdown("""
+        1.  **O Exórdio Provocador:** Nunca comeces a dizer 'Olá a todos, hoje vou falar sobre...'. Começa com um impacto. Uma pergunta direta, uma frase impactante em silêncio absoluto ou uma metáfora visual forte.
+        2.  **A Proposição Claro:** Define em apenas uma frase o objetivo central do teu discurso. Se não conseguires resumir o teu tema numa linha, o teu texto ainda precisa de edição.
+        3.  **A Confutação (Antecipação de Críticas):** Um bom escritor destrói os argumentos contrários antes mesmo que a audiência os levante. Diz abertamente: 'Muitos podem pensar que este projeto é caro, mas a verdade é que o retorno será o dobro...'.
+        4.  **A Peroração (O Fecho de Ouro):** Termina no pico da energia. Usa uma estrutura de frases paralelas (ritmo) e encerra com uma frase de efeito memorável.
+        """)
+        
+    elif menu_teoria == "3. Técnicas de Palco e Voz":
+        st.header("Domínio da Linguagem Corporal e Expressão Vocal")
+        st.write("O corpo fala antes da boca emitir o primeiro som. A tua postura dita como serás recebido.")
+        
+        # Imagem do Módulo 3
+        st.image("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop", width=500)
+        
+        st.subheader("Checklist de Performance Física:")
+        st.markdown("""
+        *   **A Posição de Base:** Pés alinhados com os ombros, peso distribuído igualmente. Evita balançar o corpo para os lados, pois isso demonstra ansiedade subconsciente.
+        *   **Gestos Abertos:** Mostra as palmas das mãos. Historicamente, mostrar as mãos significa 'não tenho armas, podes confiar em mim'. Gestos acima da linha da cintura demonstram entusiasmo.
+        *   **Modulação Vocal:** 
+            *   *Volume Alto:* Para fazer chamadas de atenção ou declarações fortes.
+            *   *Volume Baixo/Sussurro:* Para criar intimidade, segredo e focar a atenção total da sala.
+            *   *Ritmo Lento:* Passa solenidade, seriedade e importância extrema.
+        """)
+        
+    elif menu_teoria == "4. Gestão de Crise e Combate ao Bloqueio":
+        st.header("Como Controlar a Ansiedade e Brancos Mentais")
+        st.write("Sentir o coração acelerar é apenas o teu corpo a dar-te energia extra para o desafio.")
+        
+        # Imagem do Módulo 4
+        st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop", width=500)
+        
+        st.subheader("Técnicas de Emergência no Palco:")
+        st.markdown("""
+        *   **O Branco Mental:** Se esqueceres o que ias dizer, nunca digas 'esqueci-me' ou 'onde é que eu ia?'. Faz uma pausa intencional, caminha dois passos para o lado lentamente, olha para o público e repete a última frase que disseste com convicção ou faz uma pergunta retórica à plateia para ganhares 5 segundos de raciocínio.
+        *   **Ansiedade Física:** Faz exercícios de respiração diafragmática profunda minutos antes de falar. O oxigénio extra engana o cérebro, reduzindo a produção de cortisol e adrenalina.
+        """)
