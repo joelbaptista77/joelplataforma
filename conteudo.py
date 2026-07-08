@@ -11,68 +11,100 @@ def exibir_conteudo():
     st.markdown("---")
     
     menu_teoria = st.selectbox(
-        "Escolhe o módulo de estudo:",
-        ["1. Fundamentos Psicológicos (Aristóteles)", 
-         "2. Estruturação de Textos e Redação", 
-         "3. Técnicas de Palco e Voz", 
-         "4. Gestão de Crise e Combate ao Bloqueio"]
+        "Escolhe o módulo de estudo avançado:",
+        ["1. Fundamentos Psicológicos e a Retórica Clássica (Aristóteles)", 
+         "2. Estruturação de Textos, Redação e Figuras de Estilo", 
+         "3. Técnicas de Palco, Voz, Expressão e Microfone", 
+         "4. Gestão de Crise, Combate ao Bloqueio e Resiliência Oratória"]
     )
     
-    if menu_teoria == "1. Fundamentos Psicológicos (Aristóteles)":
-        st.header("Os Pilares da Persuasão Humana")
-        st.write("A retórica não é apenas falar bem; é a capacidade de identificar os meios de persuasão disponíveis para qualquer tema.")
+    if menu_teoria == "1. Fundamentos Psicológicos e a Retórica Clássica (Aristóteles)":
+        st.header("Módulo I: A Engenharia Clássica da Persuasão")
+        st.write("A retórica, formalizada por Aristóteles na Grécia Antiga, não é a arte da manipulação vazia, mas sim a ciência de extrair e apresentar a verdade de forma irresistível para a mente humana.")
         
-        # Imagem do Módulo 1
         st.image("https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=600&auto=format&fit=crop", width=500)
         
-        st.subheader("Aprofundamento Prático:")
+        st.subheader("📜 Desdobramento Profundo dos Três Pilares")
+        
         st.markdown("""
-        *   **Ethos (Construção de Autoridade):** Antes de começares a falar, o público avalia a tua competência. Podes construir Ethos demonstrando preparação, citando fontes confiáveis e mantendo uma postura vertical e segura.
-        *   **Pathos (Apelo Emocional):** As decisões humanas são baseadas em emoções e justificadas pela lógica. Usa narrativas (storytelling) onde haja um herói, um conflito claro e uma resolução inspiradora.
-        *   **Logos (Arquitetura Lógica):** Usa silogismos e dados estatísticos. Evita generalizações como 'toda a gente sabe'. Usa dados concretos: 'Segundo dados oficiais de 2026...'.
+        ### **1. ETHOS (A Construção da Credibilidade)**
+        O Ethos opera antes mesmo de abrires a boca. É o julgamento subconsciente que a audiência faz sobre o teu caráter, competência e benevolência.
+        *   **Autoridade Intrínseca:** Construída através do teu histórico, títulos e reputação prévia.
+        *   **Autoridade Extrínseca (No Palco):** Demonstra-se através da precisão vocabular, vestuário adequado ao contexto e firmeza nas primeiras frases. Se hesitares no exórdio, o teu Ethos cai drasticamente.
+        *   **A Tríade de Aristóteles para o Ethos:** *Phronesis* (sabedoria prática), *Arete* (virtude moral) e *Eunoia* (boa vontade para com o público). Deves mostrar que és inteligente, honesto e que queres genuinamente ajudar quem te ouve.
+
+        ### **2. PATHOS (A Psicologia e a Conexão Emocional)**
+        As pessoas não compram ideias baseadas apenas em factos frios; elas agem pela emoção e justificam com a lógica. O Pathos dita o estado emocional da plateia.
+        *   **A Escala de Sentimentos:** Um orador mestre sabe mover o público da apatia para a indignação, e da indignação para a esperança.
+        *   **O Poder do Storytelling:** O cérebro humano está biologicamente programado para processar narrativas. Ao contar uma história com um protagonista claro, um obstáculo intransponível e uma lição moral, os neurónios espelho da audiência disparam, criando empatia instantânea.
+
+        ### **3. LOGOS (A Arquitetura Racional e Argumentativa)**
+        A fundação intelectual do teu discurso. Sem Logos, o Pathos transforma-se em demagogia e o Ethos desmorona sob escrutínio.
+        *   **O Entimema:** Um silogismo dedutivo onde uma das premissas é omitida porque o público já a assume como verdadeira. Exemplo: *'Somos humanos, por isso falhamos'*. Abrevia o raciocínio e prende a atenção.
+        *   **Dados e Evidências:** A sustentação factual de um argumento. Deves estruturar o Logos usando o método comparativo, causas e efeitos claros, e estatísticas irrefutáveis provenientes de fontes científicas e académicas de autoridade.
         """)
         
-    elif menu_teoria == "2. Estruturação de Textos e Redação":
-        st.header("Guia Prático de Boa Escrita")
-        st.write("Escrever com clareza é o primeiro passo para falar com impacto. Um texto confuso gera um discurso perdido.")
+    elif menu_teoria == "2. Estruturação de Textos, Redação e Figuras de Estilo":
+        st.header("Módulo II: O Desenho da Palavra Escrita")
+        st.write("A escrita oratória difere da escrita puramente académica. Ela é feita para o ouvido, não apenas para o olho. Cada frase deve ter ritmo, cadência e impacto cirúrgico.")
         
-        # Imagem do Módulo 2
         st.image("https://images.unsplash.com/photo-1457369804613-52c61a468e7d?q=80&w=600&auto=format&fit=crop", width=500)
         
-        st.subheader("As Quatro Fases da Redação Oratória:")
+        st.subheader("🏛️ A Estrutura Quinquipartite do Discurso Perfeito")
         st.markdown("""
-        1.  **O Exórdio Provocador:** Nunca comeces a dizer 'Olá a todos, hoje vou falar sobre...'. Começa com um impacto. Uma pergunta direta, uma frase impactante em silêncio absoluto ou uma metáfora visual forte.
-        2.  **A Proposição Claro:** Define em apenas uma frase o objetivo central do teu discurso. Se não conseguires resumir o teu tema numa linha, o teu texto ainda precisa de edição.
-        3.  **A Confutação (Antecipação de Críticas):** Um bom escritor destrói os argumentos contrários antes mesmo que a audiência os levante. Diz abertamente: 'Muitos podem pensar que este projeto é caro, mas a verdade é que o retorno será o dobro...'.
-        4.  **A Peroração (O Fecho de Ouro):** Termina no pico da energia. Usa uma estrutura de frases paralelas (ritmo) e encerra com uma frase de efeito memorável.
+        Um texto de alto impacto divide-se historicamente em cinco partes essenciais que guiam a mente do ouvinte numa jornada lógica:
+        
+        1.  **Exórdio (A Captura da Atenção):** Os primeiros 30 a 60 segundos determinam o teu sucesso. Proibido usar clichês. Usa um gancho cognitivo: uma pergunta retórica profunda, uma estatística chocante ou um momento de silêncio absoluto focado na plateia.
+        2.  **Narratio (A Contextualização):** A exposição breve e clara dos factos do problema. É aqui que desenhas o cenário e preparas o terreno intelectual para os teus argumentos.
+        3.  **Argumentatio / Confirmatio (A Prova Técnica):** A apresentação das tuas teses centrais. Aplica a *Regra dos Três*: agrupa os teus argumentos em três grandes blocos fortes. Mais do que três confunde a memória do público; menos parece fraco.
+        4.  **Refutatio (A Destruição de Objeções):** Antecipa-te aos teus críticos. Identifica a maior fraqueza da tua proposta e desconstrói-a antes que alguém a use contra ti. Isto demonstra um domínio absoluto do tema e desarma a oposição.
+        5.  **Peroratio / Epílogo (A Conclusão Memorável):** O encerramento emocional e definitivo. Divide-se em recapitulação sintética dos pontos e na 'Chamada para a Ação' (Call to Action). Termina com uma frase de efeito concisa e marcante que ecoe na mente da audiência durante dias.
+        
+        ### ✍️ Figuras de Estilo para uma Escrita Magnética
+        *   **Anáfora:** A repetição de uma palavra ou frase no início de orações consecutivas para criar ritmo musical (Ex: *'Nós lutaremos nas praias, nós lutaremos nos campos...'*).
+        *   **Tricolon:** Estruturar frases em grupos de três elementos coordenados (Ex: *'Veni, vidi, vici'* - Vim, vi, venci). O cérebro adora padrões triplos.
+        *   **Antítese:** Justapor duas ideias opostas para criar um contraste nítido (Ex: *'O esforço é temporário, o legado é eterno'*).
         """)
         
-    elif menu_teoria == "3. Técnicas de Palco e Voz":
-        st.header("Domínio da Linguagem Corporal e Expressão Vocal")
-        st.write("O corpo fala antes da boca emitir o primeiro som. A tua postura dita como serás recebido.")
+    elif menu_teoria == "3. Técnicas de Palco, Voz, Expressão e Microfone":
+        st.header("Módulo III: A Performance Física e Vocal")
+        st.write("O conteúdo do teu discurso é apenas o mapa; a tua entrega física e o uso da voz são o veículo que transporta a audiência.")
         
-        # Imagem do Módulo 3
         st.image("https://images.unsplash.com/photo-1475721027785-f74eccf877e2?q=80&w=600&auto=format&fit=crop", width=500)
         
-        st.subheader("Checklist de Performance Física:")
+        st.subheader("🗣️ Fisiologia da Voz e Modulação Avançada")
         st.markdown("""
-        *   **A Posição de Base:** Pés alinhados com os ombros, peso distribuído igualmente. Evita balançar o corpo para os lados, pois isso demonstra ansiedade subconsciente.
-        *   **Gestos Abertos:** Mostra as palmas das mãos. Historicamente, mostrar as mãos significa 'não tenho armas, podes confiar em mim'. Gestos acima da linha da cintura demonstram entusiasmo.
-        *   **Modulação Vocal:** 
-            *   *Volume Alto:* Para fazer chamadas de atenção ou declarações fortes.
-            *   *Volume Baixo/Sussurro:* Para criar intimidade, segredo e focar a atenção total da sala.
-            *   *Ritmo Lento:* Passa solenidade, seriedade e importância extrema.
+        A voz é um instrumento de sopro mecânico. Oradores amadores falam com a garganta, cansando-se rapidamente; oradores profissionais utilizam a projeção diafragmática.
+        *   **Ressonância e Projeção:** Direciona o som para os teus ressonadores faciais (máscara vocal). Isto confere um tom encorpado, grave e autoritário à tua fala.
+        *   **A Matriz da Modulação:**
+            *   *Velocidade Variável:* Acelera ligeiramente para transmitir entusiasmo, paixão e urgência. Desacelera drasticamente para impor solenidade, respeito e marcar conceitos complexos.
+            *   *O Poder Soberano da Pausa:* O silêncio é a ferramenta mais subutilizada na oratória moderna. Uma pausa de 3 segundos *antes* de uma palavra importante cria suspense; uma pausa *depois* permite que o conceito assente e seja digerido pelo público.
+        
+        ### 🕴️ Cinesiologia e Linguagem Corporal no Palco
+        *   **A Âncora Fisiológica:** Mantém os pés firmes, paralelos à linha dos ombros. Não caminhes sem rumo de um lado para o outro de forma repetitiva (o chamado 'efeito leão na jaula'), pois isso projeta ansiedade e falta de controlo espacial. Cada deslocação no palco deve ser intencional e marcar a transição para um novo ponto do discurso.
+        *   **Gesticulação Aberta e Concreta:** Mantém as mãos acima da linha da cintura e nunca dentro dos bolsos ou cruzadas atrás das costas. Gestos abertos revelam honestidade. Usa gestos ilustrativos (ex: simular uma linha do tempo com a mão esquerda para o passado e a direita para o futuro).
+        *   **Olhar Segmentado (Técnica do Farol):** Não olhes para o teto ou para o chão. Divide a sala em quadrantes visuais e fixa o olhar diretamente nos olhos de uma pessoa específica em cada quadrante por 3 a 4 segundos antes de mudar. Isto cria uma ligação individualizada e mantém toda a sala atenta.
         """)
         
-    elif menu_teoria == "4. Gestão de Crise e Combate ao Bloqueio":
-        st.header("Como Controlar a Ansiedade e Brancos Mentais")
-        st.write("Sentir o coração acelerar é apenas o teu corpo a dar-te energia extra para o desafio.")
+    elif menu_teoria == "4. Gestão de Crise, Combate ao Bloqueio e Resiliência Oratória":
+        st.header("Módulo IV: A Psicologia do Autocontrolo sob Alta Pressão")
+        st.write("A glotofobia (medo de falar em público) está listada entre os maiores medos da humanidade. O segredo não reside em anular o medo, mas sim em dominar a resposta biológica ao stress.")
         
-        # Imagem do Módulo 4
         st.image("https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=600&auto=format&fit=crop", width=500)
         
-        st.subheader("Técnicas de Emergência no Palco:")
+        st.subheader("🚨 Protocolo de Resgate contra Brancos Mentais e Ansiedade")
         st.markdown("""
-        *   **O Branco Mental:** Se esqueceres o que ias dizer, nunca digas 'esqueci-me' ou 'onde é que eu ia?'. Faz uma pausa intencional, caminha dois passos para o lado lentamente, olha para o público e repete a última frase que disseste com convicção ou faz uma pergunta retórica à plateia para ganhares 5 segundos de raciocínio.
-        *   **Ansiedade Física:** Faz exercícios de respiração diafragmática profunda minutos antes de falar. O oxigénio extra engana o cérebro, reduzindo a produção de cortisol e adrenalina.
+        Quando o cortisol e a adrenalina disparam, o córtex pré-frontal do teu cérebro pode falhar temporariamente, gerando o famoso 'branco'. Se isto acontecer, aplica a estratégia dos mestres:
+        
+        *   **A Técnica da Recapitulação Invertida:** Nunca digas 'esqueci-me' ou 'desculpem, estou nervoso'. Isso destrói instantaneamente o teu Ethos. Em vez disso, faz uma pausa intencional, respira pelo nariz, olha para o público com calma e diz com autoridade: *'Para que este ponto fique perfeitamente claro, vale a pena relembrarmos a fundação central que referimos anteriormente...'* – isto dá-te 5 a 10 segundos para o teu cérebro restabelecer as ligações sinápticas do roteiro.
+        *   **A Pergunta Defletora:** Transfere a pressão para o público. Faz uma questão aberta provocadora: *'Quantos de vós já se depararam com uma situação semelhante na vossa rotina diária?'*. Enquanto a audiência reflete e levanta as mãos, tu ganhas o tempo necessário para te reposicionares mentalmente.
+        
+        ### 🌬️ Reprogramação Neurovegetativa Pré-Palco
+        Aplica o método de **Respiração Quadrada (Box Breathing)** 5 minutos antes de entrar em cena:
+        1.  Inala profundamente pelo nariz expandindo o diafragma durante **4 segundos**.
+        2.  Retém o ar nos teus pulmões cheios durante **4 segundos**.
+        3.  Exala de forma linear e controlada pela boca durante **4 segundos**.
+        4.  Mantém os teus pulmões completamente vazios durante **4 segundos**.
+        
+        *Repete este ciclo 4 vezes seguidas.* Este protocolo reduz imediatamente os batimentos cardíacos por via do estímulo do nervo vago, limpando o tremor nas mãos e estabilizando o teu tom de voz.
         """)
